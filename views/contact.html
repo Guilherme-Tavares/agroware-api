@@ -3,10 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agroware</title>
-    <link rel ="stylesheet" href="/styles.css">
+    <title>Contact Us - Agroware</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1>Contact</h1>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h2>🌾 Agroware</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch to learn more about Agroware Mombasa</p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <h2>Send Us a Message</h2>
+                <p class="form-intro">
+                    Fill out the form below and our team will get back to you within 24 hours.
+                </p>
+                
+                <form action="/contact" method="POST" class="contact-form">
+                    
+                    <!-- Personal Information -->
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company/Ranch Name</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                    </fieldset>
+
+                    <!-- Ranch Information -->
+                    <fieldset>
+                        <legend>Ranch Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="herdSize">Current Herd Size</label>
+                            <select id="herdSize" name="herdSize">
+                                <option value="">Select an option</option>
+                                <option value="1-50">1-50 head</option>
+                                <option value="51-200">51-200 head</option>
+                                <option value="201-500">201-500 head</option>
+                                <option value="501-1000">501-1000 head</option>
+                                <option value="1000+">1000+ head</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Current Management System</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="currentSystem" value="paper">
+                                    Paper-based records
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="currentSystem" value="spreadsheet">
+                                    Spreadsheets
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="currentSystem" value="software">
+                                    Other software
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="currentSystem" value="none">
+                                    No formal system
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="propertySize">Property Size (hectares)</label>
+                            <input type="number" id="propertySize" name="propertySize" min="0" step="0.01">
+                        </div>
+                    </fieldset>
+
+                    <!-- Interest Areas -->
+                    <fieldset>
+                        <legend>Areas of Interest</legend>
+                        
+                        <div class="form-group">
+                            <label>Which features interest you most? (Check all that apply)</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="cattle-registration">
+                                    Cattle Registration & Herd Management
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="financial">
+                                    Financial Control
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="mapping">
+                                    Property & Pasture Mapping
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="health">
+                                    Health & Vaccination Management
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="rotation">
+                                    Pasture Rotation
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="growth">
+                                    Growth Predictions & Analytics
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="offline">
+                                    Offline Capability
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Inquiry Details -->
+                    <fieldset>
+                        <legend>Inquiry Details</legend>
+                        
+                        <div class="form-group">
+                            <label for="inquiryType">Type of Inquiry *</label>
+                            <select id="inquiryType" name="inquiryType" required>
+                                <option value="">Select an option</option>
+                                <option value="product-info">Product Information</option>
+                                <option value="pricing">Pricing & Plans</option>
+                                <option value="demo">Request a Demo</option>
+                                <option value="support">Technical Support</option>
+                                <option value="partnership">Partnership Opportunities</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="urgency">Urgency Level</label>
+                            <div class="radio-group inline">
+                                <label class="radio-label">
+                                    <input type="radio" name="urgency" value="low" checked>
+                                    Low
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="urgency" value="medium">
+                                    Medium
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="urgency" value="high">
+                                    High
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required 
+                                      placeholder="Tell us more about your needs..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="referral">How did you hear about us?</label>
+                            <input type="text" id="referral" name="referral" 
+                                   list="referralOptions"
+                                   placeholder="Start typing...">
+                            <datalist id="referralOptions">
+                                <option value="Google Search">
+                                <option value="Social Media">
+                                <option value="Friend/Colleague">
+                                <option value="Agricultural Event">
+                                <option value="Magazine/Publication">
+                                <option value="Other">
+                            </datalist>
+                        </div>
+                    </fieldset>
+
+                    <!-- Preferences -->
+                    <fieldset>
+                        <legend>Communication Preferences</legend>
+                        
+                        <div class="form-group">
+                            <label for="preferredContact">Preferred Contact Method</label>
+                            <select id="preferredContact" name="preferredContact">
+                                <option value="email">Email</option>
+                                <option value="phone">Phone</option>
+                                <option value="whatsapp">WhatsApp</option>
+                                <option value="any">Any method</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bestTime">Best Time to Contact</label>
+                            <input type="time" id="bestTime" name="bestTime">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" value="yes">
+                                Subscribe to our newsletter for updates and tips
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="terms" value="accepted" required>
+                                I agree to the Terms of Service and Privacy Policy *
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="reset" class="btn btn-secondary">Clear Form</button>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Contact Info Sidebar -->
+            <div class="contact-info">
+                <h3>Other Ways to Reach Us</h3>
+                
+                <div class="info-item">
+                    <h4>📞 Phone</h4>
+                    <p>+55 (69) 99918-2237</p>
+                    <p class="small">Mon-Fri, 8AM-6PM</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>📧 Email</h4>
+                    <p>info@agroware.com</p>
+                    <p>support@agroware.com</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>📍 Address</h4>
+                    <p>151 Rio Amazonas Street</p>
+                    <p>Ji-Paraná, RO 76900-730</p>
+                    <p>Brazil</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>⏰ Business Hours</h4>
+                    <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                    <p>Saturday: 9:00 AM - 1:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Agroware. All rights reserved.</p>
+            <p>Beef Cattle Solutions for Modern Ranching</p>
+        </div>
+    </footer>
 </body>
 </html>

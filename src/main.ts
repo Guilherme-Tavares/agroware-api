@@ -24,7 +24,7 @@ app.get('/contact', (req, res) => {
 });
 
 app.post('/contact', (req, res) => {
-    console.log(req.body);
+    console.log('Form submitted:', req.body);
 
     res.redirect('/');
 });
